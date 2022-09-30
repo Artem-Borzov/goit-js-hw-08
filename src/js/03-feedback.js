@@ -30,7 +30,6 @@ function onInputEmail(event) {
   formData.email = event.target.value;
   formData.message = inputText.value;
   localStorage.setItem('feedback-form-state', JSON.stringify(formData));
-  console.log(localStorage.getItem('feedback-form-state'));
 }
 
 function onInputMessage(event) {
