@@ -22,14 +22,8 @@ if (localStorage.getItem('feedback-form-state')) {
   inputText.value = localMessage;
 }
 
-inputEmail.addEventListener(
-  'input',
-  throttle(onInputEmail, [(wait = 500)], [(options = {})])
-);
-inputText.addEventListener(
-  'input',
-  throttle(onInputMessage, [(wait = 500)], [(options = {})])
-);
+inputEmail.addEventListener('input', throttle(onInputEmail, 500));
+inputText.addEventListener('input', throttle(onInputMessage, 500));
 inputForm.addEventListener('submit', onSubmit);
 
 function onInputEmail(event) {
